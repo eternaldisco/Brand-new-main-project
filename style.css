@@ -1,0 +1,125 @@
+@font-face {
+    font-family: "Neima";
+    src: url(./sources/neima-serif-font-1669568765-0/neima.ttf);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    justify-content: center;
+}
+
+nav {
+    
+}
+
+a {
+    color: darkgoldenrod;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 25px;
+}
+
+body {
+    font-family: "Neima";
+    padding: 50px;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 45px;
+    
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.one {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    background-color: honeydew;
+    display: flex;
+}
+
+.two {
+    grid-column: 3;
+    grid-row: 1 / 6;
+    background-color: blueviolet;
+}
+
+.three {
+    grid-column: 1 / 3;
+    grid-row: 3 / 6;
+    background-color: chartreuse;
+    display: flex;
+    flex-direction: column;
+}
+
+/*#info {
+    display: none;
+}
+
+.two:hover > #info {
+    display: block;
+}*/
+
+.btn__more {
+    font-family: "Neima";
+    text-transform: uppercase;
+    background-color: whitesmoke;
+    color: #42210b;
+    height: 100px;
+    min-width: 100px;
+    align-self: flex-end;
+    position: relative;
+    border: 0;
+    font-size: 18px;
+}
+
+.btn__more::after, .btn__more::before {
+    border: 3px solid #42210b;
+    content: "";
+    position: absolute;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.btn__more:hover::before{
+    transform: translate(-5px, -5px);
+}
+
+.btn__more:hover::after{
+    transform: translate(5px, 5px);
+}
+
+#snowflake {
+    width: auto;
+    height: 100px;
+    /*animation: rotate 5s;*/
+}
+
+#snowflake:hover {
+    transform: rotate(360deg);
+    transition: all 5s ease-in-out 0s;
+}
+
+
+@keyframes rotate{
+    100% {
+        transform: rotate(360deg);
+    }
+}
